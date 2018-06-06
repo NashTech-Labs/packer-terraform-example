@@ -25,22 +25,8 @@
       },
       "owners": ["099720109477"],
       "most_recent": true
-    },
-"launch_block_device_mappings": [
-          {
-            "device_name": "/dev/sda1",
-            "volume_size": 30,
-            "volume_type": "gp2",
-            "delete_on_termination": true
-          }
-        ],
-        "ssh_pty": "true",
-        "tags": {
-          "Name":        "bootstrap-{{user `owner`}}-{{user `environment`}}-{{timestamp}}",
-          "Role":        "bootstrap",
-          "BuildDate":   "{{isotime}}"
-        }
-  }],
+    }
+}],
   "provisioners": [{
     "type": "shell",
     "environment_vars": [
@@ -49,3 +35,4 @@
     "scripts": ["packer/docker_download1.sh"]
   }]
 }
+
